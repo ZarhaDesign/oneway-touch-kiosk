@@ -437,13 +437,12 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
 #vDetail .side .cta .bigBtn{flex:1 1 auto;font-size:24px;letter-spacing:.12em}
 #vDetail .side .cta .ghostBtn{font-size:20px}
 
-/* ---------- 2027 catalogue quick access + page viewer ---------- */
+/* ---------- 2027 range: quick access + family view (Car/SUV, Van, Truck) ---------- */
 .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px}
-.qCard{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000;cursor:pointer;isolation:isolate;
-  box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.qCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 78%;
-  transform:scale(1.16);transform-origin:50% 100%;transition:transform 6s ease-out,filter .3s;filter:saturate(1.08) contrast(1.04);z-index:-2}
-.qCard:hover img,.qCard:active img{transform:scale(1.24)}
+.qCard{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000;cursor:pointer;isolation:isolate;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.qCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.04);
+  transition:transform 6s ease-out;filter:saturate(1.08) contrast(1.04);z-index:-2}
+.qCard:active img{transform:scale(1.12)}
 .qCard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(180deg,rgba(5,13,26,.6) 0%,rgba(5,13,26,0) 22%,rgba(5,13,26,0) 34%,rgba(5,13,26,.7) 55%,rgba(5,13,26,.96) 82%)}
 .qCard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--red);transform-origin:left;transform:scaleX(.18);transition:transform .35s}
@@ -452,7 +451,7 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
 .qCard .tag b{background:var(--red);padding:6px 11px 5px;letter-spacing:.2em}
 .qCard .tag span{color:#e6eefa;text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .qCard .ov{position:absolute;left:0;right:0;bottom:0;padding:0 28px 30px}
-.qCard .nm{font-size:clamp(36px,3vw,58px);font-weight:800;text-transform:uppercase;line-height:.94;letter-spacing:.01em}
+.qCard .nm{font-size:clamp(36px,3vw,58px);font-weight:800;text-transform:uppercase;line-height:.94}
 .qCard .sb{font-size:19px;letter-spacing:.06em;color:#c9d8ee;margin-top:10px;font-weight:600}
 .qCard .row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:18px}
 .qCard .st{display:flex;gap:22px}
@@ -461,57 +460,29 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
 .qCard .go{flex:0 0 64px;height:64px;display:grid;place-items:center;background:var(--red);font-size:40px;font-weight:700;line-height:1;padding-bottom:4px}
 .qCard .mk{font-size:15px;letter-spacing:.2em;color:#9fb5d6;margin-top:14px;font-weight:600;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
   border-top:1px solid rgba(255,255,255,.14);padding-top:12px}
-
-#vBook{flex-direction:row;background:radial-gradient(1200px 800px at 65% 40%,#0f2346,#050d1a 70%)}
-#vBook .bkSide{flex:0 0 410px;width:410px;min-width:0;max-width:410px;display:flex;flex-direction:column;border-right:1px solid var(--line);background:rgba(4,10,22,.85);min-height:0}
-#vBook .bkHd{position:relative;height:150px;overflow:hidden;flex:0 0 auto}
-#vBook .bkHd img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 72%;filter:brightness(.55)}
-#vBook .bkHd .tx{position:absolute;left:24px;right:24px;bottom:18px}
-#vBook .bkHd .k{font-size:16px;letter-spacing:.32em;color:#fff;font-weight:700;text-transform:uppercase}
-#vBook .bkHd .k b{background:var(--red);padding:4px 9px 3px;margin-right:10px;letter-spacing:.2em}
-#vBook .bkHd .t{font-size:40px;font-weight:800;text-transform:uppercase;line-height:1;margin-top:10px}
-#vBook .mks{flex:0 0 auto;display:flex;gap:8px;padding:14px 18px;overflow-x:auto;border-bottom:1px solid var(--line);scrollbar-width:none}
-#vBook .mks::-webkit-scrollbar{display:none}
-#vBook .mk{flex:0 0 auto;height:46px;padding:0 16px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.03);color:#cfe0f7;font:inherit;
-  font-size:17px;letter-spacing:.12em;font-weight:700;text-transform:uppercase;cursor:pointer}
-#vBook .mk.on{background:var(--red);border-color:var(--red);color:#fff}
-#vBook .mList{flex:1 1 auto;overflow-y:auto;padding:4px 0 24px}
-#vBook .mList::-webkit-scrollbar{width:8px}#vBook .mList::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18)}
-#vBook .mGrp{position:sticky;top:0;z-index:1;display:flex;align-items:center;gap:12px;font-size:16px;letter-spacing:.32em;color:var(--red);font-weight:700;
-  padding:16px 22px 8px;background:linear-gradient(#060e1e 70%,rgba(6,14,30,0))}
-#vBook .mGrp::after{content:"";flex:1;height:1px;background:rgba(200,15,46,.35)}
-#vBook .mRow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 22px 12px 17px;cursor:pointer;border-left:5px solid transparent}
-#vBook .mRow:active{background:rgba(255,255,255,.05)}
-#vBook .mRow.on{background:linear-gradient(90deg,rgba(200,15,46,.22),rgba(18,80,143,.10));border-left-color:var(--red)}
-#vBook .mRow .n{font-size:22px;font-weight:700;line-height:1.1;text-transform:uppercase}
-#vBook .mRow .p{flex:0 0 auto;text-align:right;font-size:14px;letter-spacing:.14em;color:var(--dim);font-weight:700;line-height:1.35;text-transform:uppercase}
-#vBook .mRow .p b{color:#fff}
-#vBook .bkMain{flex:1 1 auto;display:flex;flex-direction:column;min-width:0;min-height:0}
-#vBook .stage{flex:1 1 auto;position:relative;display:flex;align-items:center;justify-content:center;padding:26px 104px 18px;min-height:0;touch-action:pan-y}
-#vBook .sheet{position:relative;max-width:100%;max-height:100%;display:flex}
-#vBook .sheet img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
-#vBook .sheet img.in{animation:pgIn .32s ease-out}
-@keyframes pgIn{from{opacity:0;transform:translateX(var(--dx,24px))}to{opacity:1;transform:none}}
-#vBook .nav{position:absolute;top:50%;transform:translateY(-50%);width:76px;height:76px;border-radius:50%;border:1px solid rgba(255,255,255,.22);
-  background:rgba(8,18,38,.8);color:#fff;font:inherit;font-size:46px;line-height:1;cursor:pointer;padding-bottom:6px}
-#vBook .nav:active{background:var(--red);border-color:var(--red)}
-#vBook .nav.l{left:16px}#vBook .nav.r{right:16px}
-#vBook .nav[disabled]{opacity:.25}
-#vBook .info{flex:0 0 auto;display:flex;align-items:center;gap:22px;margin:0 24px;padding:14px 20px;background:rgba(8,18,38,.85);border:1px solid var(--line);border-left:5px solid var(--red)}
-#vBook .info .mdl{min-width:0;flex:1 1 auto}
-#vBook .info .k{font-size:15px;letter-spacing:.28em;color:var(--dim);font-weight:700;text-transform:uppercase}
-#vBook .info .k b{color:#fff}
-#vBook .info .n{font-size:30px;font-weight:800;text-transform:uppercase;line-height:1.05;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#vBook .info .pts{display:flex;gap:8px;margin-top:9px;overflow:hidden;flex-wrap:nowrap}
-#vBook .info .pts span{flex:0 0 auto;font-size:15px;letter-spacing:.08em;font-weight:700;padding:5px 10px 4px;border:1px solid rgba(255,255,255,.16);color:#cfe0f7;text-transform:uppercase}
-#vBook .info .pts span i{font-style:normal;color:var(--red);margin-right:7px}
-#vBook .bkAsk{flex:0 0 auto;height:64px;font-size:20px}
-#vBook .strip{position:relative;flex:0 0 auto;display:flex;gap:10px;overflow-x:auto;padding:14px 24px 16px;scrollbar-width:none}
-#vBook .strip::-webkit-scrollbar{display:none}
-#vBook .strip .th{position:relative;flex:0 0 auto;cursor:pointer}
-#vBook .strip img{display:block;height:70px;opacity:.5;outline:2px solid transparent;background:#fff;transition:opacity .2s}
-#vBook .strip .th.on img{opacity:1;outline-color:var(--red);outline-offset:2px}
-#vBook .strip .th b{position:absolute;left:4px;bottom:3px;font-size:12px;font-weight:700;background:rgba(5,13,26,.85);padding:1px 5px;letter-spacing:.06em}
+#vFam .famHero{position:relative;flex:0 0 250px;overflow:hidden;isolation:isolate}
+#vFam .famHero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%;z-index:-2}
+#vFam .famHero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,13,26,.95) 0%,rgba(5,13,26,.7) 38%,rgba(5,13,26,.05) 75%),linear-gradient(0deg,rgba(5,13,26,.9),rgba(5,13,26,0) 45%)}
+#vFam .famHero .tx{position:absolute;left:34px;bottom:30px}
+#vFam .famHero .k{font-size:18px;letter-spacing:.32em;font-weight:700;text-transform:uppercase}
+#vFam .famHero .k b{background:var(--red);padding:5px 10px 4px;margin-right:12px;letter-spacing:.2em}
+#vFam .famHero .t{font-size:72px;font-weight:800;text-transform:uppercase;line-height:.95;margin-top:14px}
+#vFam .famHero .s{font-size:21px;color:#c9d8ee;margin-top:10px;font-weight:600;letter-spacing:.05em}
+#vFam .famHero .st{position:absolute;right:34px;bottom:30px;display:flex;gap:34px;text-align:right}
+#vFam .famHero .st div{font-size:16px;letter-spacing:.24em;color:var(--dim);text-transform:uppercase;font-weight:700}
+#vFam .famHero .st b{display:block;font-size:52px;line-height:1;color:#fff;letter-spacing:0;font-weight:800}
+#vFam .mks{flex:0 0 auto;display:flex;gap:10px;padding:18px 34px;overflow-x:auto;border-bottom:1px solid var(--line);background:#081226;scrollbar-width:none}
+#vFam .mks::-webkit-scrollbar{display:none}
+#vFam .mk{flex:0 0 auto;height:52px;padding:0 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.03);color:#cfe0f7;font:inherit;
+  font-size:19px;letter-spacing:.14em;font-weight:700;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:10px}
+#vFam .mk i{font-style:normal;color:var(--dim);font-size:16px}
+#vFam .mk.on{background:var(--red);border-color:var(--red);color:#fff}#vFam .mk.on i{color:#ffd5dc}
+#vFam .grp{display:flex;align-items:center;gap:16px;font-size:22px;letter-spacing:.32em;color:var(--red);font-weight:700;margin:8px 0 18px}
+#vFam .grp::after{content:"";flex:1;height:1px;background:rgba(200,15,46,.35)}
+#vFam .grp span{color:var(--dim);font-size:17px;letter-spacing:.2em}
+#vFam .gridVeh{margin-bottom:40px}
+.vehCard .ph{position:relative}
+.vehCard .ph .new{position:absolute;top:12px;left:12px;background:var(--red);font-size:15px;letter-spacing:.2em;font-weight:700;padding:4px 9px 3px}
 </style>
 </head><body>
 
@@ -549,8 +520,8 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
   <!-- brands -->
   <section class="view on" id="vBrands">
     <div class="scroll">
-      <div class="sectionTitle">New for 2027</div>
-      <div class="sectionSub">Browse the catalogues</div>
+      <div class="sectionTitle">ONEWAY 2027 range</div>
+      <div class="sectionSub">Shop by vehicle type</div>
       <div class="quick" id="quickGrid"></div>
       <div class="sectionTitle">Product Catalog 2026</div>
       <div class="sectionSub">Choose a make</div>
@@ -558,20 +529,12 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
     </div>
   </section>
 
-  <!-- 2027 catalogue page viewer -->
-  <section class="view" id="vBook">
-    <div class="bkSide">
-      <div class="bkHd"><img id="bkHero" alt=""><div class="tx"><div class="k"><b>2027</b>Catalogue</div><div class="t" id="bkTitle"></div></div></div>
-      <div class="mks" id="bkMakes"></div>
-      <div class="mList" id="bkList"></div>
-    </div>
-    <div class="bkMain">
-      <div class="stage" id="bkStage"><div class="sheet"><img id="bkImg" alt=""></div>
-        <button class="nav l" type="button" id="bkPrev">‹</button><button class="nav r" type="button" id="bkNext">›</button></div>
-      <div class="info"><div class="mdl"><div class="k" id="bkPg"></div><div class="n" id="bkMdl"></div><div class="pts" id="bkPts"></div></div>
-        <button class="bigBtn bkAsk" type="button" id="bkAsk">Send me details</button></div>
-      <div class="strip" id="bkStrip"></div>
-    </div>
+  <!-- 2027 range family (car/suv, van, truck) -->
+  <section class="view" id="vFam">
+    <div class="famHero"><img id="famImg" alt=""><div class="tx"><div class="k"><b>2027</b>ONEWAY range</div><div class="t" id="famT"></div><div class="s" id="famS"></div></div>
+      <div class="st" id="famSt"></div></div>
+    <div class="mks" id="famMk"></div>
+    <div class="scroll" id="famBody"></div>
   </section>
 
   <!-- part categories -->
@@ -675,7 +638,7 @@ header img.logo,#attract>img{-webkit-touch-callout:none}
 <script src="data.js"></script>
 <script src="videos.js"></script>
 <script src="kitvideos.js"></script>
-<script src="catalogs.js"></script>
+<script src="data27.js"></script>
 <script>
 (function(){
 var D=(window.ONEWAY_DATA||{vehicles:[]}).vehicles;
@@ -776,7 +739,7 @@ var cats=Object.keys(byCat).sort(function(a,b){return byCat[b].veh.length-byCat[
   });
 })();
 function openCat(c){
-  curBrand=null; curCat=c;
+  curBrand=null; curCat=c; curFam=null;
   $('vehHead').textContent=c;
   $('vehKick').textContent='Fits these vehicles';
   var g=$('vehGrid'); g.innerHTML='';
@@ -788,12 +751,12 @@ function vehCard(v){
   var d=document.createElement('div'); d.className='vehCard';
   d.innerHTML='<div class="ph">'+(v.hero[0]?'<img src="'+v.hero[0]+'" alt="">':'')+'</div>'+
     '<div class="bd"><div class="nm">'+v.name+'</div>'+
-    '<div class="mt"><span>'+(v.bk||'')+'</span><b>'+v.products.length+' parts</b></div></div>';
+    '<div class="mt"><span>'+(v.bk||'2027')+'</span><b>'+v.products.length+' part'+(v.products.length===1?'':'s')+'</b></div></div>';
   d.onclick=function(){ openVeh(v); };
   return d;
 }
 function openBrand(b){
-  curBrand=b; curCat=null; stack=['brands'];
+  curBrand=b; curCat=null; curFam=null; stack=['brands'];
   $('vehKick').textContent='Accessories for';
   $('vehHead').textContent=b;
   var g=$('vehGrid'); g.innerHTML='';
@@ -814,8 +777,8 @@ function openVeh(v){
     ims[cur].classList.remove('on'); th[cur].classList.remove('on'); cur=n; ims[cur].classList.add('on'); th[cur].classList.add('on'); }
   if(ims.length>1) galT=setInterval(function(){ if($('vDetail').classList.contains('on') && !$('dFocus').classList.contains('on')) go((cur+1)%ims.length); },5000);
   var live=(function(){ try{ return JSON.parse(localStorage.getItem('oneway_display_cfg_v1')||'{}').spot!==false; }catch(e){ return true; } })();
-  $('dCap').innerHTML='<div class="bk">Kit '+(v.bk||'')+'  ·  '+v.products.length+' parts  ·  ABS · Gloss Black</div>'+
-    '<div class="nm">'+v.name+'</div><button type="button" class="live'+(live?'':' off')+'" id="dLive"><i></i><span>'+(live?((window.ONEWAY_VIDEO_FOR&&window.ONEWAY_VIDEO_FOR(v.bk)>=0)?(window.ONEWAY_VIDEO_SIMILAR&&window.ONEWAY_VIDEO_SIMILAR(v.bk)?'A similar model’s video is on the big screen · tap to stop':'Its video is on the big screen · tap to stop'):'Showing on the big screen · tap to stop'):'Big screen not following · tap to show')+'</span></button>';
+  $('dCap').innerHTML='<div class="bk">'+(v.bk?'Kit '+v.bk:'2027 '+(FAMS[v.fam]?FAMS[v.fam].sh:'')+' range')+'  ·  '+v.products.length+' part'+(v.products.length===1?'':'s')+'  ·  ABS · Gloss Black</div>'+
+    '<div class="nm">'+v.name+'</div><button type="button" class="live'+(live?'':' off')+'" id="dLive"'+(D.indexOf(v)<0?' style="display:none"':'')+'><i></i><span>'+(live?((window.ONEWAY_VIDEO_FOR&&window.ONEWAY_VIDEO_FOR(v.bk)>=0)?(window.ONEWAY_VIDEO_SIMILAR&&window.ONEWAY_VIDEO_SIMILAR(v.bk)?'A similar model’s video is on the big screen · tap to stop':'Its video is on the big screen · tap to stop'):'Showing on the big screen · tap to stop'):'Big screen not following · tap to show')+'</span></button>';
   $('dLive').onclick=function(){ var c; try{ c=JSON.parse(localStorage.getItem('oneway_display_cfg_v1')||'{}'); }catch(e){ c={}; }
     c.spot=(c.spot===false); try{ localStorage.setItem('oneway_display_cfg_v1',JSON.stringify(c)); }catch(e){}
     var on=c.spot!==false; this.classList.toggle('off',!on); this.querySelector('span').textContent=on?'Showing on the big screen · tap to stop':'Big screen not following · tap to show';
@@ -836,85 +799,58 @@ function openVeh(v){
 }
 $('dAsk').onclick=function(){ var v=curVeh; openLead();
   if(v){ leadParts=v.bk+' '+v.name+': '+v.products.map(function(p){return p.sku;}).join(' '); $('lfAbout').textContent='About: '+v.name+' · kit '+v.bk; } };
-$('dBackMk').onclick=function(){ if(curVeh) openBrand(curVeh.brand); };
-function home(){ stack=[]; curBrand=null; curCat=null; show('vBrands','<b>All Brands</b>'); }
+$('dBackMk').onclick=function(){ if(curVeh&&curFam) openFam(curFam,famMake); else if(curVeh) openBrand(curVeh.brand); };
+function home(){ stack=[]; curBrand=null; curCat=null; curFam=null; show('vBrands','<b>All Brands</b>'); }
 
-/* 2027 catalogues: quick-access tiles on the home screen + a page viewer driven by each catalogue's product index */
-var BOOKS=window.ONEWAY_BOOKS||{}, bk=null, bkKey='', bkPage=1, bkModel=null, bkMake='';
-var BK_HERO={car:97,van:40,truck:5};
-function pad3(n){ return ('00'+n).slice(-3); }
-function bkSrc0(b,n,th){ return b.dir+(th?'/t':'')+'/p-'+pad3(n)+'.jpg'; }
-function bkSrc(n,th){ return bkSrc0(bk,n,th); }
-function bkMakes(b){ var a=[]; b.m.forEach(function(m){ if(a.indexOf(m.mk)<0) a.push(m.mk); }); return a; }
+/* 2027 range: Car & SUV (the 2026 kit data, unchanged for 2027), Van and Truck (photos, cut-outs and part numbers from the 2027 print catalogues) */
+var D27=window.ONEWAY_DATA27||{}, curFam=null, famMake='';
+var FAMS={
+  car:{t:'Passenger Car & SUV',sh:'Car & SUV',s:'Body kits · splitters · skirts · spoilers · diffusers',img:'assets/c27/hero_car.jpg',v:D},
+  van:{t:'Van',sh:'Van',s:(D27.van||{}).s||'',img:'assets/c27/hero_van.jpg',v:(D27.van||{}).vehicles||[]},
+  truck:{t:'Truck & Pickup',sh:'Truck',s:(D27.truck||{}).s||'',img:'assets/c27/hero_truck.jpg',v:(D27.truck||{}).vehicles||[]}
+};
+function famMakes(F){ var a=[],n={}; F.v.forEach(function(v){ if(!n[v.brand]){ n[v.brand]=0; a.push(v.brand); } n[v.brand]++; }); return {list:a,n:n}; }
+function famParts(F){ var s={}; F.v.forEach(function(v){ v.products.forEach(function(p){ s[p.sku]=1; }); }); return Object.keys(s).length; }
 (function(){
   var g=$('quickGrid'); if(!g) return;
-  ['car','van','truck'].forEach(function(k){ var b=BOOKS[k]; if(!b) return;
-    var mk=bkMakes(b), d=document.createElement('div'); d.className='qCard';
-    d.innerHTML='<img src="'+bkSrc0(b,BK_HERO[k]||1)+'" alt=""><div class="tag"><b>2027</b><span>Catalogue</span></div>'+
-      '<div class="ov"><div class="nm">'+b.t+'</div><div class="sb">'+b.s+'</div>'+
-      '<div class="row"><div class="st"><div><b>'+b.m.length+'</b>Models</div><div><b>'+mk.length+'</b>Makes</div><div><b>'+b.n+'</b>Pages</div></div><div class="go">›</div></div>'+
-      '<div class="mk">'+mk.join('  ·  ')+'</div></div>';
-    d.onclick=function(){ openBook(k); };
+  ['car','van','truck'].forEach(function(k){ var F=FAMS[k]; if(!F.v.length) return; F.v.forEach(function(v){ if(!v.fam) v.fam=k; });
+    var M=famMakes(F), d=document.createElement('div'); d.className='qCard';
+    d.innerHTML='<img src="'+F.img+'" alt=""><div class="tag"><b>2027</b><span>ONEWAY range</span></div>'+
+      '<div class="ov"><div class="nm">'+F.t+'</div><div class="sb">'+F.s+'</div>'+
+      '<div class="row"><div class="st"><div><b>'+F.v.length+'</b>Models</div><div><b>'+M.list.length+'</b>Makes</div><div><b>'+famParts(F)+'</b>Parts</div></div><div class="go">›</div></div>'+
+      '<div class="mk">'+M.list.join('  ·  ')+'</div></div>';
+    d.onclick=function(){ openFam(k); };
     g.appendChild(d);
   });
 })();
-function openBook(k,page){
-  bk=BOOKS[k]; if(!bk) return; bkKey=k; bkModel=null; bkMake='';
-  $('bkTitle').textContent=bk.t; $('bkHero').src=bkSrc(BK_HERO[k]||1);
-  var M=$('bkMakes'); M.innerHTML='';
-  ['All'].concat(bkMakes(bk)).forEach(function(x){ var b=document.createElement('button'); b.type='button'; b.className='mk'+(x==='All'?' on':''); b.textContent=x;
-    b.onclick=function(){ bkMake=(x==='All'?'':x); [].forEach.call(M.children,function(c){ c.classList.toggle('on',c===b); }); bkListDraw(); $('bkList').scrollTop=0;
-      if(bkMake){ var f=bk.m.filter(function(m){ return m.mk===bkMake; })[0]; if(f) bkGo(f.pg[0]-(bkIsOpener(f.pg[0]-1)?1:0)); } };
-    M.appendChild(b); });
-  var S=$('bkStrip'); S.innerHTML='';
-  for(var i=1;i<=bk.n;i++){ (function(n){ var t=document.createElement('div'); t.className='th';
-    t.innerHTML='<img loading="lazy" src="'+bkSrc(n,1)+'" alt=""><b>'+n+'</b>'; t.onclick=function(){ bkGo(n); }; S.appendChild(t); })(i); }
-  bkListDraw();
-  show('vBook','<i>2027 Catalogue</i> / '+bk.t);
-  bkGo(page||1,true);
+function openFam(k,mk){
+  var F=FAMS[k]; if(!F) return; curFam=k; curBrand=null; curCat=null; famMake=mk||''; stack=['fam'];
+  var M=famMakes(F);
+  $('famImg').src=F.img; $('famT').textContent=F.t; $('famS').textContent=F.s;
+  $('famSt').innerHTML='<div><b>'+F.v.length+'</b>Models</div><div><b>'+M.list.length+'</b>Makes</div><div><b>'+famParts(F)+'</b>Parts</div>';
+  var C=$('famMk'); C.innerHTML='';
+  ['All'].concat(M.list).forEach(function(x){ var b=document.createElement('button'); b.type='button'; var on=(x==='All'?!famMake:famMake===x);
+    b.className='mk'+(on?' on':''); b.innerHTML=x+'<i>'+(x==='All'?F.v.length:M.n[x])+'</i>';
+    b.onclick=function(){ famMake=(x==='All'?'':x); [].forEach.call(C.children,function(c){ c.classList.toggle('on',c===b); }); famDraw(); };
+    C.appendChild(b); });
+  famDraw();
+  show('vFam','<i>2027 range</i> / '+F.t);
+  var on=C.querySelector('.mk.on'); if(on) on.scrollIntoView({inline:'nearest',block:'nearest'});
 }
-function bkIsOpener(n){ return n>=1 && !bkModelAt(n); }
-function bkListDraw(){
-  var L=$('bkList'); L.innerHTML=''; var last='';
-  bk.m.forEach(function(m){ if(bkMake && m.mk!==bkMake) return;
-    if(m.mk!==last){ last=m.mk; var h=document.createElement('div'); h.className='mGrp'; h.textContent=m.mk; L.appendChild(h); }
-    var r=document.createElement('div'); r.className='mRow'+(m===bkModel?' on':''); r._m=m;
-    var nm=m.n.indexOf(m.mk)===0?m.n.slice(m.mk.length).trim():m.n, np=m.pt.length;
-    r.innerHTML='<div class="n">'+nm+'</div><div class="p"><b>'+np+'</b> part'+(np===1?'':'s')+'<br>p. '+m.pg[0]+'</div>';
-    r.onclick=function(){ bkGo(m.pg[0]); };
-    L.appendChild(r); });
+function famDraw(){
+  var F=FAMS[curFam], B=$('famBody'); B.innerHTML=''; B.scrollTop=0; var by={}, order=[];
+  F.v.forEach(function(v){ if(famMake && v.brand!==famMake) return; if(!by[v.brand]){ by[v.brand]=[]; order.push(v.brand); } by[v.brand].push(v); });
+  order.forEach(function(b){
+    var h=document.createElement('div'); h.className='grp'; h.innerHTML=b+'<span>'+by[b].length+' model'+(by[b].length===1?'':'s')+'</span>'; B.appendChild(h);
+    var g=document.createElement('div'); g.className='gridVeh'; by[b].forEach(function(v){ g.appendChild(vehCard(v)); }); B.appendChild(g);
+  });
 }
-function bkModelAt(n){ var best=null; bk.m.forEach(function(m){ m.pg.forEach(function(p){ if(p<=n && n<=p+1 && (!best||p>best.p)) best={m:m,p:p}; }); }); return best&&best.m; }
-function bkGo(n,first){
-  if(!bk) return; n=Math.max(1,Math.min(bk.n,n)); var dir=n>=bkPage?1:-1; bkPage=n;
-  var im=$('bkImg'); im.classList.remove('in'); im.style.setProperty('--dx',(first?0:dir*28)+'px'); im.src=bkSrc(n); void im.offsetWidth; im.classList.add('in');
-  [n+1,n+2,n-1].forEach(function(x){ if(x>=1&&x<=bk.n){ var p=new Image(); p.src=bkSrc(x); } });
-  $('bkPrev').disabled=(n<=1); $('bkNext').disabled=(n>=bk.n);
-  var S=$('bkStrip'); [].forEach.call(S.children,function(t,i){ t.classList.toggle('on',i===n-1); });
-  var t=S.children[n-1]; if(t) S.scrollTo({left:t.offsetLeft-S.clientWidth/2+t.clientWidth/2,behavior:first?'auto':'smooth'});
-  var m=bkModelAt(n); bkModel=m||null;
-  [].forEach.call($('bkList').querySelectorAll('.mRow'),function(x){ var on=!!m&&x._m===m; x.classList.toggle('on',on); if(on) x.scrollIntoView({block:'nearest'}); });
-  $('bkPg').innerHTML='Page <b>'+n+'</b> of '+bk.n+(m?'  ·  '+m.mk:'');
-  $('bkMdl').textContent=m?m.n:bk.t+' catalogue';
-  $('bkPts').innerHTML=m?m.pt.map(function(p){ return '<span><i>'+p[0]+'</i>'+p[1]+'</span>'; }).join(''):'<span>Swipe or tap › to turn the page</span>';
-  $('bkAsk').textContent=m?'Send me details on this':'Send me details';
-}
-$('bkPrev').onclick=function(){ bkGo(bkPage-1); };
-$('bkNext').onclick=function(){ bkGo(bkPage+1); };
-(function(){ var x0=null, st=$('bkStage');
-  st.addEventListener('pointerdown',function(e){ if(e.target.closest('.nav')) return; x0=e.clientX; });
-  st.addEventListener('pointerup',function(e){ if(x0===null) return; var dx=e.clientX-x0; x0=null;
-    if(Math.abs(dx)>60) bkGo(bkPage+(dx<0?1:-1)); });
-})();
-$('bkAsk').onclick=function(){ var m=bkModel, t=bk?bk.t:''; openLead();
-  if(m){ leadParts='2027 '+t+' catalogue p.'+bkPage+' · '+m.n+(m.bk?' ('+m.bk+')':'')+': '+m.pt.map(function(p){return p[0];}).join(' ');
-    $('lfAbout').textContent='About: '+m.n; }
-  else { leadParts='2027 '+t+' catalogue p.'+bkPage; $('lfAbout').textContent='About: '+t+' catalogue'; } };
 
 
 $('bBack').onclick=function(){
   var v=document.querySelector('.view.on').id;
-  if(v==='vDetail'&&curBrand) openBrand(curBrand);
+  if(v==='vDetail'&&curFam) openFam(curFam,famMake);
+  else if(v==='vDetail'&&curBrand) openBrand(curBrand);
   else if(v==='vDetail'&&curCat) openCat(curCat);
   else if(v==='vVeh'&&curCat) show('vCats','<i>By Part</i>');
   else home();
